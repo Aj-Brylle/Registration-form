@@ -1,0 +1,360 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+body{
+    background-color: #E3E3E3;
+    min-height: 100vh;
+    width: 100%;
+    transition: 2.5s;
+}
+header {
+    display: flex;
+    position: absolute;
+    padding: 30px ;
+  }
+.switch {
+    width: 80px;
+    height: 40px;
+    background-color: rgb(41, 40, 40);
+    border-radius: 40px;
+    position: relative;
+  }
+  .flicker {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    box-shadow: inset 4px 4px 4px rgb(255, 255, 255),
+      inset -4px -4px 4px rgb(195 196 197 / 90%);
+    transition: 0.9s;
+  }
+  .dark {
+    background-color: rgba(0, 17, 1, 0.815);
+    transition: 2.5s;
+  }
+  .dark .flicker {
+    transform: translateX(40px);
+  }
+  .dark > * {
+    color: rgb(235, 232, 232);
+  }
+  .moon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
+    position: absolute;
+    top: 5px;
+    right: 15px;
+  }
+  .sun {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(230, 255, 8);
+    box-shadow: 0 0 5px 2px rgba(230, 255, 8, 0.5);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+.firstdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1e202923;
+}
+.dark .firstdiv{
+  background-color: #a9fe391c;
+}
+.seconddiv{
+    position: relative;
+    height: 550px;
+    width: 400px;
+    border-radius: 20px;
+    background-color: #ffffffde;
+    border-bottom: 1px solid #A8FE39;
+    border-top: 1px solid #A8FE39;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 2.5s;
+}
+.dark .seconddiv{
+    background-color: #000000a8;
+    border-bottom:1px solid #EDFF08;
+    border-top:1px solid #EDFF08;
+    transition: 2.5s;
+}
+.seconddiv h1{
+    color: #A8FE39;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: 2.5s;
+}
+.dark h1{
+    color: #A8FE39;
+    transition: 2.5s;
+}
+#result{
+    position: absolute;
+    width: 300px;
+    color: rgb(187, 0, 0);
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 2.5s;
+}
+.dark #result{
+    color: rgb(255, 0, 0);
+    transition: 2.5s;
+}
+.seconddiv .input{
+    position: relative;
+    margin: 30px 0;
+    width: 300px;
+    border-bottom: 1px solid #1E2029;
+    background-color: #1e20290c;
+    border-radius: 2px;
+    transition: 2.5s;
+}
+.dark .input{
+  color: white;
+    border-bottom: 1px solid #FFFFFF;
+    background-color: #ffffff0e;
+    transition: 2.5s;
+}
+.seconddiv .input input{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    color: #000000;
+    transition: 2.5s;
+    font-family:Tahoma, Geneva, sans-serif;
+}
+.dark .seconddiv .input input{
+   color: #FFFFFF;
+   font-family: Tahoma, Geneva, sans-serif;
+   transition: 2.5s;
+}
+input::placeholder{
+    text-align: center;
+    color: #00000057;
+    transition: 2.5s;
+}
+.dark input::placeholder{
+    color: #ffffff23;
+    transition: 2.5s;
+}
+.btn{
+    color: #1E2029;
+    background:  #A8FE39;
+    font-size: 17px;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 2.5s;
+}
+.dark .btn{
+    color: rgb(0, 0, 0);
+    background: #EDFF08;
+    transition: 2.5s;
+}
+
+.decor {
+  position: absolute;
+  width: 100%;
+  height: 350px;
+}
+.cube {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  transform: rotate(-25deg) skew(25deg);
+}
+.cube:before {
+  position: absolute;
+  content: "";
+  width: 21px;
+  height: 100%;
+  transform: skewY(-45deg);
+  left: -20px;
+  bottom: -10px;
+}
+.cube::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 21px;
+  transform: skewX(-45deg);
+  left: -10px;
+  bottom: -20px;
+}
+
+#javascript {
+  left: 100px;
+  bottom: 100px;
+  background-color: rgb(253, 253, 69);
+  box-shadow: -60px 60px 20px rgba(82, 82, 82, 0.15);
+  transition: 2.5s;
+}
+#javascript:before {
+  background-color: rgb(181, 181, 44);
+  transition: 2.5s;
+}
+#javascript:after {
+  background-color: rgb(229, 229, 32);
+  transition: 2.5s;
+}
+.dark #javascript {
+  left: 310px;
+  bottom: 10px;
+  background-color: rgb(117, 255, 255);
+  box-shadow: -60px 60px 20px rgba(138, 137, 137, 0.15);
+  transition: 2.5s;
+}
+.dark #javascript:before {
+  background-color: rgb(138, 233, 233);
+  transition: 2.5s;
+}
+.dark #javascript:after {
+  background-color: rgb(71, 226, 226);
+  transition: 2.5s;
+}
+
+#html {
+  left: 330px;
+  top: 10px;
+  background-color: rgb(255, 171, 97);
+  box-shadow: -100px 100px 20px rgb(50 50 50 / 15%);
+  transition: 2.5s;
+}
+#html:before {
+  background-color: rgb(192, 100, 19);
+  transition: 2.5s;
+}
+#html:after {
+  background-color: rgb(228, 115, 17);
+  transition: 2.5s;
+}
+.dark #html {
+  left: 100px;
+  top: 50px;
+  background-color: #EDFF08;
+  box-shadow: -100px 100px 20px rgba(105, 105, 105, 0.15);
+  transition: 2.5s;
+}
+.dark #html:before {
+  background-color: #E0FF00;
+  transition: 2.5s;
+}
+.dark #html:after {
+  background-color: #A8FE39;
+  transition: 2.5s;
+}
+
+#go {
+  left: 900px;
+  bottom: 10px;
+  background-color: rgb(117, 255, 255);
+  box-shadow: -50px 50px 20px rgb(50 50 50 / 15%);
+  transition: 2.5s;
+}
+#go:before {
+  background-color: rgb(138, 233, 233);
+  transition: 2.5s;
+}
+#go:after {
+  background-color: rgb(71, 226, 226);
+  transition: 2.5s;
+}
+.dark #go { left: 1150px;
+  background-color: rgb(255, 171, 97);
+  box-shadow: -50px 50px 20px rgba(121, 121, 121, 0.15);
+  transition: 2.5s;
+}
+.dark #go:before {
+  background-color: rgb(192, 100, 19);
+  transition: 2.5s;
+}
+.dark #go:after {
+  background-color: rgb(228, 115, 17);
+  transition: 2.5s;
+}
+
+#css {
+  right: 75px;
+  bottom: 160px;
+  background-color: rgb(32, 177, 250);
+  box-shadow: -80px 80px 20px rgb(50 50 50 / 15%);
+  transition: 2.5s;
+}
+#css:before {
+  background-color: rgb(6, 126, 186);
+  transition: 2.5s;
+}
+#css:after {
+  background-color: rgb(11, 154, 226);
+  transition: 2.5s;
+}
+.dark #css {
+  right: 300px;
+  bottom: 200px;
+  background-color: rgb(255, 0, 0);
+  box-shadow: -80px 80px 20px rgba(119, 119, 119, 0.15);
+  transition: 2.5s;
+}
+.dark #css:before {
+  background-color: rgb(186, 6, 6);
+  transition: 2.5s;
+}
+.dark #css:after {
+  background-color: rgb(226, 11, 11);
+  transition: 2.5s;
+}
+
+#ok {
+  right: 610px;
+  bottom: 260px;
+  background-color: rgb(250, 32, 177);
+  box-shadow: -80px 80px 20px rgb(50 50 50 / 15%);
+  transition: 2.5s;
+}
+#ok:before {
+  background-color: rgb(186, 6, 162);
+  transition: 2.5s;
+}
+#ok:after {
+  background-color: rgb(208, 11, 226);
+  transition: 2.5s;
+}
+.dark #ok {
+  right: 610px;
+  bottom: 10px;
+  background-color: rgb(212, 0, 255);
+  box-shadow: -80px 80px 20px rgba(119, 119, 119, 0.15);
+  transition: 2.5s;
+}
+.dark #ok:before {
+  background-color: rgb(156, 6, 186);
+  transition: 2.5s;
+}
+.dark #ok:after {
+  background-color: rgb(201, 11, 226);
+  transition: 2.5s;
+}
+
